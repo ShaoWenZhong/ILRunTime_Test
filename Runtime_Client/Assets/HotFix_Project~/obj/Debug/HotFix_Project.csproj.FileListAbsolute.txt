@@ -1,0 +1,2 @@
+E:\UnityProject\Test_Project\MyRuntime_2021_9_12\Assets\HotFix_Project~\obj\Debug\HotFix_Project.csproj.AssemblyReference.cache
+E:\UnityProject\Test_Project\MyRuntime_2021_9_12\Assets\HotFix_Project~\obj\Debug\HotFix_Project.csproj.CoreCompileInputs.cache
