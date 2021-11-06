@@ -5,11 +5,10 @@ using UnityEngine;
 /// <summary>
 /// Â·¾¶¹ÜÀí
 /// </summary>
-public class URLManager : Singleton<URLManager>
+public static class URLManager
 {
-    public override void Init()
+    public static string GetScenePath(int sceneId)
     {
-        base.Init();
-
+        return "scene_" + sceneId;
     }
 }

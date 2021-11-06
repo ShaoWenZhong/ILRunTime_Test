@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{7DCBB935-6764-9340-3D09-56C941D3C4B5}</ProjectGuid>
+    <ProjectGuid>{839620F0-4062-BF33-04F6-4D4B6385DB0E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -56,8 +56,9 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\08_MonoBehaviour\Editor\MonoBehaviourAdapterEditor.cs" />
     <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Editor\ILRuntimeCrossBinding.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\08_MonoBehaviour\Editor\MonoBehaviourAdapterEditor.cs" />
+    <Compile Include="Assets\Editor\MyEditor\ILRuntimeDllBundleBuild.cs" />
     <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Editor\ILRuntimeCLRBinding.cs" />
     <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Editor\ILRuntimeMenu.cs" />
   </ItemGroup>
@@ -659,6 +660,12 @@
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.CacheServer">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.CacheServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Addressables">
+      <HintPath>Library\ScriptAssemblies\Unity.Addressables.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -674,6 +681,18 @@
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ScriptableBuildPipeline">
+      <HintPath>Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Addressables.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Addressables.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ResourceManager">
+      <HintPath>Library\ScriptAssemblies\Unity.ResourceManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ScriptableBuildPipeline.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
@@ -686,8 +705,12 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{40CE9CFA-D882-E0D6-FF39-BD7B2AC697DF}</Project>
+      <Project>{C17E5E87-7EE5-9F60-3DE1-3DBDB2F5DC3E}</Project>
       <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.CloudContentDelivery.Editor.csproj">
+      <Project>{224EAD04-3004-C0DF-D86E-DFCA670C85FA}</Project>
+      <Name>Unity.CloudContentDelivery.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

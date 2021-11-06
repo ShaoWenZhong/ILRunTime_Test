@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{40CE9CFA-D882-E0D6-FF39-BD7B2AC697DF}</ProjectGuid>
+    <ProjectGuid>{C17E5E87-7EE5-9F60-3DE1-3DBDB2F5DC3E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -57,24 +57,91 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\09_Reflection\ReflectionDemo.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\Generated\UnityEngine_Object_Binding.cs" />
     <Compile Include="Assets\3rd\ILRuntime\Generated\System_Type_Binding.cs" />
-    <Compile Include="Assets\ILRuntime\Runtime\Debugger\Protocol\CSResolveVariable.cs" />
-    <Compile Include="Assets\ILRuntime\Runtime\Stack\RuntimeStack.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\Generated\System_Int32_Binding.cs" />
     <Compile Include="Assets\Scrips\Utils\Singleton.cs" />
-    <Compile Include="Assets\ILRuntime\CLR\Method\CLRMethod.cs" />
-    <Compile Include="Assets\ILRuntime\Runtime\Intepreter\RegisterVM\Optimizer.Utils.cs" />
     <Compile Include="Assets\ILRuntime\CLR\Method\ILMethod.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Debugger\Protocol\SCStepComplete.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\LitJson\JsonData.cs" />
-    <Compile Include="Assets\ILRuntime\Runtime\Stack\StackObject.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Intepreter\ILTypeInstance.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Intepreter\RegisterVM\Optimizer.ELDC.cs" />
-    <Compile Include="Assets\ILRuntime\Reflection\ILRuntimeFieldInfo.cs" />
     <Compile Include="Assets\3rd\ILRuntime\Generated\System_String_Binding.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Debugger\Protocol\SCEnumChildrenResult.cs" />
     <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\04_Inheritance\InheritanceAdapter.cs" />
+    <Compile Include="Assets\Scrips\Utils\DebugUtil.cs" />
+    <Compile Include="Assets\Scrips\Managers\ILRuntimeManager.cs" />
+    <Compile Include="Assets\ILRuntime\Other\UncheckedList.cs" />
+    <Compile Include="Assets\Scrips\Managers\PathManager.cs" />
+    <Compile Include="Assets\ILRuntime\Reflection\ILRuntimeParameterInfo.cs" />
+    <Compile Include="Assets\ILRuntime\Runtime\Debugger\DebugService.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\08_MonoBehaviour\MonoBehaviourAdapter.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\12_Performance\Performance.cs" />
+    <Compile Include="Assets\Scrips\GameLanch.cs" />
+    <Compile Include="Assets\ILRuntime\Runtime\CLRBinding\CLRBindingUtils.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\Generated\UnityEngine_Transform_Binding.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\LitJson\JsonMapper.cs" />
+    <Compile Include="Assets\ILRuntime\Runtime\CLRBinding\ValueTypeBindingGenerator.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\Generated\CoroutineDemo_Binding.cs" />
+    <Compile Include="Assets\ILRuntime\Runtime\Debugger\Protocol\CSStep.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\Generated\System_Collections_Generic_Dictionary_2_String_ILTypeInstance_Bin.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\01_HelloWorld\HelloWorld.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\11_ValueTypeBinding\QuaternionBinder.cs" />
+    <Compile Include="Assets\ILRuntime\Other\ByReferenceKeyComparer.cs" />
+    <Compile Include="Assets\ILRuntime\Other\NeedAdaptorAttribute.cs" />
+    <Compile Include="Assets\ILRuntime\Runtime\Debugger\Protocol\SCResolveVariableResult.cs" />
+    <Compile Include="Assets\ILRuntime\Runtime\Debugger\StackFrameInfo.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\Generated\TestDelegateMethod_Binding.cs" />
+    <Compile Include="Assets\Scrips\Utils\Singleton_Mono.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\08_MonoBehaviour\MonoBehaviourDemo.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\Generated\System_Single_Binding.cs" />
+    <Compile Include="Assets\ILRuntime\Other\DelegateExportAttribute.cs" />
+    <Compile Include="Assets\ILRuntime\Runtime\Enviorment\AppDomain.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\Generated\UnityEngine_Input_Binding.cs" />
+    <Compile Include="Assets\ILRuntime\Runtime\Intepreter\RegisterVM\Optimizer.BCP.cs" />
+    <Compile Include="Assets\Scrips\Managers\URLManager.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\Generated\System_Collections_Generic_List_1_Int32_Binding.cs" />
+    <Compile Include="Assets\ILRuntime\Runtime\Debugger\DebugSocket.cs" />
+    <Compile Include="Assets\ILRuntime\Runtime\Stack\StackObjectAllocator.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\07_Coroutine\CoroutineAdapter.cs" />
+    <Compile Include="Assets\ILRuntime\Runtime\Debugger\Protocol\SCBindBreakpointResult.cs" />
+    <Compile Include="Assets\ILRuntime\Runtime\Debugger\Protocol\SCThreadStarted.cs" />
+    <Compile Include="Assets\ILRuntime\Runtime\Debugger\Protocol\SCBreakpointHit.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\03_Delegate\DelegateDemo.cs" />
+    <Compile Include="Assets\ILRuntime\Runtime\ILRuntimeJITAttribute.cs" />
+    <Compile Include="Assets\ILRuntime\Runtime\Debugger\Protocol\CSEnumChildren.cs" />
+    <Compile Include="Assets\ILRuntime\Runtime\Enviorment\CrossBindingMethodInfo.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\02_Invocation\Invocation.cs" />
+    <Compile Include="Assets\ILRuntime\Reflection\ILRuntimeWrapperType.cs" />
+    <Compile Include="Assets\ILRuntime\CLR\TypeSystem\CLRType.cs" />
+    <Compile Include="Assets\ILRuntime\Runtime\CLRBinding\ConstructorBindingGenerator.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\Generated\System_Boolean_Binding.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\Generated\UnityEngine_Quaternion_Binding.cs" />
+    <Compile Include="Assets\ILRuntime\Other\ThreadSafeDictionary.cs" />
+    <Compile Include="Assets\ILRuntime\Runtime\Debugger\BreakPointContext.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\Generated\TestClassBase_Binding.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\Generated\LitJson_JsonMapper_Binding.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\Generated\System_Int64_Binding.cs" />
+    <Compile Include="Assets\ILRuntime\Runtime\Extensions.cs" />
+    <Compile Include="Assets\ILRuntime\Other\UncheckedStack.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\LitJson\JsonException.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\Generated\System_Collections_Generic_List_1_ILTypeInstance_Binding.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\Generated\UnityEngine_Vector3_Binding.cs" />
+    <Compile Include="Assets\ILRuntime\CLR\Utils\Extensions.cs" />
+    <Compile Include="Assets\ILRuntime\Runtime\Intepreter\RegisterVM\AsyncJITCompileWorker.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\05_CLRRedirection\CLRRedirectionDemo.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\04_Inheritance\Inheritance.cs" />
+    <Compile Include="Assets\ILRuntime\Runtime\Debugger\StepTypes.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\Generated\System_Object_Binding.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\Generated\UnityEngine_Renderer_Binding.cs" />
+    <Compile Include="Assets\ILRuntime\Runtime\Intepreter\OpCodes\OpCodeREnum.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\Generated\UnityEngine_Time_Binding.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\Generated\UnityEngine_Object_Binding.cs" />
+    <Compile Include="Assets\ILRuntime\Runtime\Debugger\Protocol\CSResolveVariable.cs" />
+    <Compile Include="Assets\ILRuntime\Runtime\Stack\RuntimeStack.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\Generated\System_Int32_Binding.cs" />
+    <Compile Include="Assets\ILRuntime\CLR\Method\CLRMethod.cs" />
+    <Compile Include="Assets\ILRuntime\Runtime\Intepreter\RegisterVM\Optimizer.Utils.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\LitJson\JsonData.cs" />
+    <Compile Include="Assets\ILRuntime\Runtime\Stack\StackObject.cs" />
+    <Compile Include="Assets\ILRuntime\Reflection\ILRuntimeFieldInfo.cs" />
     <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\07_Coroutine\CoroutineDemo.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Intepreter\OpCodes\OpCodeEnum.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Debugger\DebugMessageType.cs" />
@@ -83,136 +150,72 @@
     <Compile Include="Assets\ILRuntime\Runtime\Enviorment\ValueTypeBinder.cs" />
     <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\LitJson\Lexer.cs" />
     <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\11_ValueTypeBinding\Vector2Binder.cs" />
-    <Compile Include="Assets\Scrips\Managers\ILRuntimeManager.cs" />
-    <Compile Include="Assets\ILRuntime\Other\UncheckedList.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Debugger\Protocol\CSResolveIndexer.cs" />
     <Compile Include="Assets\3rd\ILRuntime\Generated\CLRBindings.cs" />
-    <Compile Include="Assets\ILRuntime\Reflection\ILRuntimeParameterInfo.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Enviorment\CrossBindingAdaptor.cs" />
-    <Compile Include="Assets\ILRuntime\Runtime\Debugger\DebugService.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Enviorment\InvocationContext.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\08_MonoBehaviour\MonoBehaviourAdapter.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\12_Performance\Performance.cs" />
-    <Compile Include="Assets\Scrips\GameLanch.cs" />
     <Compile Include="Assets\Scrips\Managers\CameraManager.cs" />
-    <Compile Include="Assets\ILRuntime\Runtime\CLRBinding\CLRBindingUtils.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\Generated\UnityEngine_Transform_Binding.cs" />
     <Compile Include="Assets\3rd\ILRuntime\Generated\System_Text_StringBuilder_Binding.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\LitJson\JsonMapper.cs" />
-    <Compile Include="Assets\ILRuntime\Runtime\CLRBinding\ValueTypeBindingGenerator.cs" />
     <Compile Include="Assets\3rd\ILRuntime\Generated\System_Action_1_String_Binding.cs" />
+    <Compile Include="Assets\ILRuntime\Runtime\CLRBinding\BindingGeneratorExtensions.cs" />
     <Compile Include="Assets\3rd\ILRuntime\Generated\DelegateDemo_Binding.cs" />
     <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\06_CLRBinding\CLRBindingDemo.cs" />
-    <Compile Include="Assets\ILRuntime\Runtime\CLRBinding\BindingGeneratorExtensions.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\Generated\CoroutineDemo_Binding.cs" />
-    <Compile Include="Assets\ILRuntime\Runtime\Debugger\Protocol\CSStep.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\Generated\System_Collections_Generic_Dictionary_2_String_ILTypeInstance_Bin.cs" />
     <Compile Include="Assets\Scrips\Managers\TimerManager.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\01_HelloWorld\HelloWorld.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Intepreter\RegisterVM\Optimizer.InlineMethod.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\11_ValueTypeBinding\QuaternionBinder.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Debugger\Protocol\CSDeleteBreakpoint.cs" />
     <Compile Include="Assets\ILRuntime\Reflection\Extensions.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Intepreter\RegisterVM\JITCompiler.cs" />
-    <Compile Include="Assets\ILRuntime\CLR\Method\ExceptionHandler.cs" />
     <Compile Include="Assets\ILRuntime\Reflection\ILRuntimeType.cs" />
+    <Compile Include="Assets\ILRuntime\CLR\Method\ExceptionHandler.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Intepreter\RegisterVM\Optimizer.FCP.cs" />
     <Compile Include="Assets\ILRuntime\Reflection\ILRuntimeConstructorInfo.cs" />
     <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\11_ValueTypeBinding\Vector3Binder.cs" />
     <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\LitJson\JsonMockWrapper.cs" />
-    <Compile Include="Assets\ILRuntime\Other\ByReferenceKeyComparer.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\CLRBinding\FieldBindingGenerator.cs" />
-    <Compile Include="Assets\ILRuntime\Other\NeedAdaptorAttribute.cs" />
     <Compile Include="Assets\ILRuntime\Properties\AssemblyInfo.cs" />
-    <Compile Include="Assets\ILRuntime\Runtime\Debugger\Protocol\SCResolveVariableResult.cs" />
     <Compile Include="Assets\3rd\ILRuntime\Generated\CLRBindingTestClass_Binding.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Intepreter\RegisterVM\ILIntepreter.Register.cs" />
-    <Compile Include="Assets\ILRuntime\Runtime\Debugger\StackFrameInfo.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\Generated\TestDelegateMethod_Binding.cs" />
     <Compile Include="Assets\3rd\ILRuntime\Generated\UnityEngine_GameObject_Binding.cs" />
-    <Compile Include="Assets\Scrips\Utils\Singleton_Mono.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Enviorment\CrossBindingCodeGenerator.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\CLRBinding\MethodBindingGenerator.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Debugger\VariableInfo.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\08_MonoBehaviour\MonoBehaviourDemo.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\Generated\System_Single_Binding.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Intepreter\ILIntepreter.cs" />
     <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\10_LitJson\LitJsonDemo.cs" />
-    <Compile Include="Assets\ILRuntime\Other\DelegateExportAttribute.cs" />
     <Compile Include="Assets\ILRuntime\CLR\TypeSystem\ILType.cs" />
-    <Compile Include="Assets\ILRuntime\Runtime\Enviorment\AppDomain.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\Generated\UnityEngine_Input_Binding.cs" />
-    <Compile Include="Assets\ILRuntime\Runtime\Intepreter\RegisterVM\Optimizer.BCP.cs" />
+    <Compile Include="Assets\Scrips\Managers\AddressableManager.cs" />
     <Compile Include="Assets\3rd\ILRuntime\Generated\UnityEngine_WaitForSeconds_Binding.cs" />
-    <Compile Include="Assets\Scrips\Managers\URLManager.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\CLRBinding\CommonBindingGenerator.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Debugger\Protocol\SCModuleLoaded.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\Generated\System_Collections_Generic_List_1_Int32_Binding.cs" />
     <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\LitJson\ParserToken.cs" />
     <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\LitJson\JsonWriter.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Adaptors\CLRCrossBindingAdaptors.cs" />
-    <Compile Include="Assets\ILRuntime\Runtime\Debugger\DebugSocket.cs" />
-    <Compile Include="Assets\ILRuntime\Runtime\Stack\StackObjectAllocator.cs" />
     <Compile Include="Assets\ILRuntime\CLR\TypeSystem\IType.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\07_Coroutine\CoroutineAdapter.cs" />
-    <Compile Include="Assets\ILRuntime\Runtime\Debugger\Protocol\SCBindBreakpointResult.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Debugger\Protocol\SCAttachResult.cs" />
-    <Compile Include="Assets\ILRuntime\Runtime\Debugger\Protocol\SCThreadStarted.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Enviorment\DelegateManager.cs" />
-    <Compile Include="Assets\ILRuntime\Runtime\Debugger\Protocol\SCBreakpointHit.cs" />
     <Compile Include="Assets\3rd\ILRuntime\Generated\System_Collections_Generic_Dictionary_2_String_Int32_Binding.cs" />
     <Compile Include="Assets\ILRuntime\Reflection\ILRuntimePropertyInfo.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\03_Delegate\DelegateDemo.cs" />
-    <Compile Include="Assets\ILRuntime\Runtime\ILRuntimeJITAttribute.cs" />
-    <Compile Include="Assets\ILRuntime\Runtime\Debugger\Protocol\CSEnumChildren.cs" />
     <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\11_ValueTypeBinding\ValueTypeBindingDemo.cs" />
-    <Compile Include="Assets\ILRuntime\Runtime\Enviorment\CrossBindingMethodInfo.cs" />
     <Compile Include="Assets\3rd\ILRuntime\Generated\System_Diagnostics_Stopwatch_Binding.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\02_Invocation\Invocation.cs" />
     <Compile Include="Assets\3rd\ILRuntime\Generated\UnityEngine_Debug_Binding.cs" />
-    <Compile Include="Assets\ILRuntime\Reflection\ILRuntimeWrapperType.cs" />
-    <Compile Include="Assets\ILRuntime\CLR\TypeSystem\CLRType.cs" />
-    <Compile Include="Assets\ILRuntime\Runtime\CLRBinding\ConstructorBindingGenerator.cs" />
     <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\LitJson\IJsonWrapper.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\Generated\System_Boolean_Binding.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Intepreter\ILRuntimeException.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\Generated\UnityEngine_Quaternion_Binding.cs" />
     <Compile Include="Assets\3rd\ILRuntime\Generated\UnityEngine_Vector2_Binding.cs" />
-    <Compile Include="Assets\ILRuntime\Other\ThreadSafeDictionary.cs" />
-    <Compile Include="Assets\ILRuntime\Runtime\Intepreter\RegisterVM\Optimizer.RegisterCleanup.cs" />
-    <Compile Include="Assets\ILRuntime\Runtime\Debugger\BreakPointContext.cs" />
-    <Compile Include="Assets\ILRuntime\Runtime\Enviorment\CLRRedirections.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\Generated\TestClassBase_Binding.cs" />
     <Compile Include="Assets\ILRuntime\Reflection\ILRuntimeMethodInfo.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\Generated\LitJson_JsonMapper_Binding.cs" />
+    <Compile Include="Assets\ILRuntime\Runtime\Intepreter\RegisterVM\Optimizer.RegisterCleanup.cs" />
+    <Compile Include="Assets\ILRuntime\Runtime\Enviorment\CLRRedirections.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Intepreter\DelegateAdapter.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\Generated\System_Int64_Binding.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Debugger\DebuggerServer\DebuggerServer.cs" />
     <Compile Include="Assets\Scrips\Managers\ResManager.cs" />
     <Compile Include="Assets\3rd\ILRuntime\Generated\System_NotSupportedException_Binding.cs" />
-    <Compile Include="Assets\ILRuntime\Runtime\Extensions.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Intepreter\OpCodes\OpCode.cs" />
     <Compile Include="Assets\ILRuntime\CLR\TypeSystem\ILGenericParameterType.cs" />
-    <Compile Include="Assets\ILRuntime\Other\UncheckedStack.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\LitJson\JsonException.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\Generated\System_Collections_Generic_List_1_ILTypeInstance_Binding.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\Generated\UnityEngine_Vector3_Binding.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Debugger\BreakpointInfo.cs" />
-    <Compile Include="Assets\ILRuntime\CLR\Utils\Extensions.cs" />
-    <Compile Include="Assets\ILRuntime\Runtime\Intepreter\RegisterVM\AsyncJITCompileWorker.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\05_CLRRedirection\CLRRedirectionDemo.cs" />
     <Compile Include="Assets\3rd\ILRuntime\Generated\TestDelegateFunction_Binding.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\LitJson\JsonReader.cs" />
-    <Compile Include="Assets\ILRuntime\Runtime\Debugger\StepTypes.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Debugger\Protocol\CSBindBreakpoint.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\04_Inheritance\Inheritance.cs" />
+    <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\LitJson\JsonReader.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Stack\StackFrame.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\Generated\System_Object_Binding.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\Generated\UnityEngine_Renderer_Binding.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\CLRBinding\BindingCodeGenerator.cs" />
     <Compile Include="Assets\ILRuntime\CLR\Method\IMethod.cs" />
-    <Compile Include="Assets\ILRuntime\Runtime\Intepreter\OpCodes\OpCodeREnum.cs" />
-    <Compile Include="Assets\3rd\ILRuntime\Generated\UnityEngine_Time_Binding.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\StreamingAssets\HotFix\System.Diagnostics.Tracing.dll" />
@@ -810,6 +813,12 @@
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.CacheServer">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.CacheServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Addressables">
+      <HintPath>Library\ScriptAssemblies\Unity.Addressables.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -825,6 +834,18 @@
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ScriptableBuildPipeline">
+      <HintPath>Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Addressables.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Addressables.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ResourceManager">
+      <HintPath>Library\ScriptAssemblies\Unity.ResourceManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ScriptableBuildPipeline.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
@@ -836,6 +857,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Unity.CloudContentDelivery.Editor.csproj">
+      <Project>{224EAD04-3004-C0DF-D86E-DFCA670C85FA}</Project>
+      <Name>Unity.CloudContentDelivery.Editor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

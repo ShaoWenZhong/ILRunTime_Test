@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Threading.Tasks;
 using Unity;
 using UnityEngine;
 
@@ -23,30 +24,46 @@ public class GameLanch : Singleton_Mono<GameLanch>
         //服务器上下载最新的ab包
 
         //
+
+        //热更代码已经打成bundler包进行加载
 #if UNITY_ANDROID
-        WWW www = new WWW(Application.streamingAssetsPath + "/HotFix_Project.dll");
+        Task<byte[]> task = AddressableManager.Instance.LoadFile_Addressable("Hot_FixDLL");
+        //WWW www = new WWW(Application.streamingAssetsPath + "/HotFix_Project.dll");
 #else
-        WWW www = new WWW("file:///" + Application.streamingAssetsPath + "/HotFix/HotFix_Project.dll");
+        //WWW www = new WWW("file:///" + Application.streamingAssetsPath + "/HotFix/HotFix_Project.dll");
+        //WWW www = new WWW("file:///" + Application.streamingAssetsPath + "/HotFix/HotFix_Project.dll");
+        Task<byte[]> task = AddressableManager.Instance.LoadFile_Addressable("Hot_FixDLL");
 #endif
-        while (!www.isDone)
+        //while (!www.isDone)
+        //    yield return null;
+        //if (!string.IsNullOrEmpty(www.error))
+        //    UnityEngine.Debug.LogError(www.error);
+        //byte[] dll = www.bytes;
+        //www.Dispose();
+
+        while (!task.IsCompleted)
             yield return null;
-        if (!string.IsNullOrEmpty(www.error))
-            UnityEngine.Debug.LogError(www.error);
-        byte[] dll = www.bytes;
-        www.Dispose();
+        byte[] dll = task.Result;
 
         //PDB文件是调试数据库，如需要在日志中显示报错的行号，则必须提供PDB文件，不过由于会额外耗用内存，正式发布时请将PDB去掉，下面LoadAssembly的时候pdb传null即可
 #if UNITY_ANDROID
-        www = new WWW(Application.streamingAssetsPath + "/HotFix_Project.pdb");
+        //www = new WWW(Application.streamingAssetsPath + "/HotFix_Project.pdb");
+        Task<byte[]> task_pdb = AddressableManager.Instance.LoadFile_Addressable("Hot_FixPDB");
 #else
-        www = new WWW("file:///" + Application.streamingAssetsPath + "/HotFix/HotFix_Project.pdb");
+        //www = new WWW("file:///" + Application.streamingAssetsPath + "/HotFix/HotFix_Project.pdb");
+        Task<byte[]> task_pdb = AddressableManager.Instance.LoadFile_Addressable("Hot_FixPDB");
 #endif
-        while (!www.isDone)
+        //while (!www.isDone)
+        //    yield return null;
+        //if (!string.IsNullOrEmpty(www.error))
+        //    UnityEngine.Debug.LogError(www.error);
+        //byte[] pdb = www.bytes;
+        //www.Dispose();
+
+        while (!task_pdb.IsCompleted)
             yield return null;
-        if (!string.IsNullOrEmpty(www.error))
-            UnityEngine.Debug.LogError(www.error);
-        byte[] pdb = www.bytes;
-        www.Dispose();
+        byte[] pdb = task_pdb.Result;
+
         ILRuntimeManager.Instance.LoadHotFixAssembly(dll,pdb);
         ILRuntimeManager.Instance.EnterGame();
         yield break;

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{C17E5E87-7EE5-9F60-3DE1-3DBDB2F5DC3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.CloudContentDelivery.Editor", "Unity.CloudContentDelivery.Editor.csproj", "{224EAD04-3004-C0DF-D86E-DFCA670C85FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{839620F0-4062-BF33-04F6-4D4B6385DB0E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C17E5E87-7EE5-9F60-3DE1-3DBDB2F5DC3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C17E5E87-7EE5-9F60-3DE1-3DBDB2F5DC3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C17E5E87-7EE5-9F60-3DE1-3DBDB2F5DC3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C17E5E87-7EE5-9F60-3DE1-3DBDB2F5DC3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{224EAD04-3004-C0DF-D86E-DFCA670C85FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{224EAD04-3004-C0DF-D86E-DFCA670C85FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{224EAD04-3004-C0DF-D86E-DFCA670C85FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{224EAD04-3004-C0DF-D86E-DFCA670C85FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{839620F0-4062-BF33-04F6-4D4B6385DB0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{839620F0-4062-BF33-04F6-4D4B6385DB0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{839620F0-4062-BF33-04F6-4D4B6385DB0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{839620F0-4062-BF33-04F6-4D4B6385DB0E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
