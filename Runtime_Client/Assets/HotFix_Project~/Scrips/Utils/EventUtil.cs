@@ -148,5 +148,6 @@ namespace HotFix_Project.Scrips.Utils
         GameStart,
         LoginSucceed,
         UIViewPopChange,
+        DisposeUI,
     }
 }

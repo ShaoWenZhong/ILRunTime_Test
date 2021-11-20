@@ -16,12 +16,13 @@ namespace HotFix_Project.Scrips
         {
             Debug.Log("hot fix init");
             GameLanch.Instance.Test();
-            UIManager uIManager = UIManager.Instance;
+            EventUtil.SendMessage(EventType.GameStart);
+           UIManager.Instance.ShowOrLoadView(UIType.LoginUI);
         }
 
-        public static void Update()
+        public static void Update(float deltaTime)
         {
-            //Debug.Log("Update");
+            UIManager.Instance.Update(deltaTime);
         }
 
         public static void LateUpdate()

@@ -8,9 +8,10 @@ namespace HotFix_Project.Scrips.Managers
 {
     public static class UrlManager
     {
-        public static string GetUIPath(string paath)
+        public static string GetUIPath(string path)
         {
-            return "";
+            string full_path = "Assets/AssetsPackage/UI/Panel/" + path + ".prefab";
+            return full_path;
         }
     }
 }

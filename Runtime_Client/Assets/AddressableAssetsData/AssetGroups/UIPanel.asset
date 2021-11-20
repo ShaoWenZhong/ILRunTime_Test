@@ -18,11 +18,19 @@ MonoBehaviour:
   m_GUID: 7a634c0b2ac23904698d458afb2464fd
   m_SerializeEntries:
   - m_GUID: 0692bc2805274914599e4cf4ac36bbd2
-    m_Address: LoginView
+    m_Address: Assets/AssetsPackage/UI/Panel/Login/LoginView.prefab
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 3478134282037218809, guid: 0692bc2805274914599e4cf4ac36bbd2, type: 3}
-    m_TargetAsset: {fileID: 3478134282037218809, guid: 0692bc2805274914599e4cf4ac36bbd2, type: 3}
+    m_SerializedLabels:
+    - default
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: c8b3df196b3ab664cafbb56067cf0dc3
+    m_Address: Assets/AssetsPackage/UI/Panel/SelectRole/SelectRoleView.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 5bb66aa21eb57174086c90cd1c895f5a, type: 2}
   m_SchemaSet:

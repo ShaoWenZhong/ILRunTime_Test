@@ -74,6 +74,7 @@
     <Compile Include="Assets\ILRuntime\Runtime\Debugger\DebugService.cs" />
     <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\08_MonoBehaviour\MonoBehaviourAdapter.cs" />
     <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\12_Performance\Performance.cs" />
+    <Compile Include="Assets\Scrips\Managers\QualityManager.cs" />
     <Compile Include="Assets\Scrips\GameLanch.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\CLRBinding\CLRBindingUtils.cs" />
     <Compile Include="Assets\3rd\ILRuntime\Generated\UnityEngine_Transform_Binding.cs" />
@@ -119,6 +120,7 @@
     <Compile Include="Assets\3rd\ILRuntime\Generated\TestClassBase_Binding.cs" />
     <Compile Include="Assets\3rd\ILRuntime\Generated\LitJson_JsonMapper_Binding.cs" />
     <Compile Include="Assets\3rd\ILRuntime\Generated\System_Int64_Binding.cs" />
+    <Compile Include="Assets\Scrips\PreUpdateView.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Extensions.cs" />
     <Compile Include="Assets\ILRuntime\Other\UncheckedStack.cs" />
     <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\LitJson\JsonException.cs" />
@@ -136,6 +138,7 @@
     <Compile Include="Assets\3rd\ILRuntime\Generated\UnityEngine_Object_Binding.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Debugger\Protocol\CSResolveVariable.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Stack\RuntimeStack.cs" />
+    <Compile Include="Assets\Scrips\Utils\CustomUtil.cs" />
     <Compile Include="Assets\3rd\ILRuntime\Generated\System_Int32_Binding.cs" />
     <Compile Include="Assets\ILRuntime\CLR\Method\CLRMethod.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Intepreter\RegisterVM\Optimizer.Utils.cs" />
@@ -218,6 +221,7 @@
     <Compile Include="Assets\ILRuntime\CLR\Method\IMethod.cs" />
   </ItemGroup>
   <ItemGroup>
+     <None Include="Assets\StreamingAssets\HotFix\UnityEngine.UI.dll" />
      <None Include="Assets\StreamingAssets\HotFix\System.Diagnostics.Tracing.dll" />
      <None Include="Assets\StreamingAssets\HotFix\System.Security.SecureString.dll" />
      <None Include="Assets\Dependencies\ILRuntime.Mono.Cecil.Mdb.dll" />

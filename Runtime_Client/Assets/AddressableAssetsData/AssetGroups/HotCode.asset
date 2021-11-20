@@ -20,15 +20,17 @@ MonoBehaviour:
   - m_GUID: 38075382a328620429b9f815073c5e39
     m_Address: Hot_FixDLL
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 4900000, guid: 38075382a328620429b9f815073c5e39, type: 3}
-    m_TargetAsset: {fileID: 4900000, guid: 38075382a328620429b9f815073c5e39, type: 3}
+    m_SerializedLabels:
+    - default
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 753742ce18b80d041b529a50644ce36b
     m_Address: Hot_FixPDB
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 4900000, guid: 753742ce18b80d041b529a50644ce36b, type: 3}
-    m_TargetAsset: {fileID: 4900000, guid: 753742ce18b80d041b529a50644ce36b, type: 3}
+    m_SerializedLabels:
+    - default
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 5bb66aa21eb57174086c90cd1c895f5a, type: 2}
   m_SchemaSet:

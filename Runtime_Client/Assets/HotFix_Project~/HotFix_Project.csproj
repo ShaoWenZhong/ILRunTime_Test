@@ -63,6 +63,9 @@
       <HintPath>UnityDlls\UnityEngine.InputLegacyModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>D:\Program Files\Unity2020.30f1\Editor\Data\Resources\PackageManager\ProjectTemplates\libcache\com.unity.template.universal-10.3.2\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UIModule">
       <HintPath>UnityDlls\UnityEngine.UIModule.dll</HintPath>
       <Private>False</Private>
@@ -81,10 +84,13 @@
     <Compile Include="Scrips\3rd\InstanceClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scrips\Game\Login\LoginView.cs" />
+    <Compile Include="Scrips\Game\SelectRole\SelectRoleView.cs" />
     <Compile Include="Scrips\Main.cs" />
     <Compile Include="Scrips\Managers\EventSender.cs" />
     <Compile Include="Scrips\Managers\LayerManager.cs" />
     <Compile Include="Scrips\Managers\UIBase.cs" />
+    <Compile Include="Scrips\Managers\UIViewBase.cs" />
+    <Compile Include="Scrips\Managers\UIInterface.cs" />
     <Compile Include="Scrips\Managers\UIItem.cs" />
     <Compile Include="Scrips\Managers\UIManager.cs" />
     <Compile Include="Scrips\Managers\UrlManager.cs" />

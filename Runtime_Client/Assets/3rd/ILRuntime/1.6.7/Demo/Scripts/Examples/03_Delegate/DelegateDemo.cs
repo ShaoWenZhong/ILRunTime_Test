@@ -91,7 +91,9 @@ public class DelegateDemo : MonoBehaviour
         appdomain.DelegateManager.RegisterFunctionDelegate<int, string>();
         //Action<string> 的参数为一个string
         appdomain.DelegateManager.RegisterMethodDelegate<string>();
-        
+
+        appdomain.DelegateManager.RegisterFunctionDelegate<int, GameObject>();
+
         //ILRuntime内部是用Action和Func这两个系统内置的委托类型来创建实例的，所以其他的委托类型都需要写转换器
         //将Action或者Func转换成目标委托类型
 

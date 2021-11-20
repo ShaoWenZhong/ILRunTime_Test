@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
-using HotFix_Project.Scrips.Utils;
+using UnityEngine.UI;
 
 namespace HotFix_Project.Scrips.Managers
 {
@@ -13,247 +13,164 @@ namespace HotFix_Project.Scrips.Managers
     /// </summary>
     public class UIBase
     {
-        //窗体类型
-        protected ShowUIMode showUIMode;
 
-        public float closeTime;
+        public UIViewBase parent_view;
 
-        public UIRootType rootType;
-
-        //缓存窗体的RectTransform组件
         protected GameObject panelGO;
 
+        protected bool isInitialize = false;
+        protected bool isPop = false;
+        protected bool isOpen = false;
+        protected bool lastOpen = false;
+        protected bool isActive = false;
+        protected string assetPath;
+        protected bool isLoadComplete = false;
+        protected bool isDeletening = false;
+        //缓存窗体的RectTransform组件
         protected RectTransform thisTrans;
+        protected Action onLoadedComlete;
 
-        protected bool isFullScren = false;
+        protected string ui_name;
 
-        protected bool isHideMainUI = false;
+        protected List<UIBase> subItemList;
+        private bool isChecking_Recursive = false;
 
-        protected bool isCLoseOtherView = false;
+        protected List<RawImage> rawImages;
 
-
-        private bool isInitialize = false;
-        private bool isPop = false;
-        private bool isOpen = false;
-        private bool isActive = false;
-        private bool isHideCamera = false;
-        private int openOhterCount = 0;
-        private string assetPath;
-
-        //当前窗体的ID
-        protected UIType curUIType = UIType.NullUI;
-        //上一个窗体的ID
-        protected UIType beforeUiId = UIType.NullUI;
-
-        //获取当前窗体的ID
-        public UIType GetUiId
-        {
-            get
+        protected virtual void Initlialize() {
+            isInitialize = true;
+            if (onLoadedComlete != null)
             {
-                return curUIType;
+                onLoadedComlete();
+                onLoadedComlete = null;
             }
         }
 
-        //用于判断窗体显示出来的时候，是否需要去隐藏其他窗体
-        public bool IsHideOtherUI()
+        protected virtual void OnShowSelf(){ }
+
+        protected virtual void OnHideSelf(){ }
+
+        public virtual bool IsView(){return false;}
+
+        public virtual bool IsItem(){return false;}
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="ignore_avtive">忽略显示隐藏操作，省性能</param>
+        public virtual void SetIsPop(bool value,bool ignore_avtive = false) { }
+
+        protected virtual void SetGoToDelete()
         {
-            if (showUIMode == ShowUIMode.DoNothing)
+            if (isDeletening)
+                return;
+
+            lastOpen = false;
+            isDeletening = true;
+            onLoadedComlete = null;
+            SetPopSubItem(false);
+        }
+
+        protected virtual void SetIsPopRecursive(bool value)
+        {
+            if (value)
             {
-                return false;//不需要隐藏其他窗体
+                if (lastOpen)
+                    SetIsPop(true, true);
+                lastOpen = false;
             }
             else
             {
-                //需要去处理隐藏其他窗体的逻辑
-                return true;// E_ShowUIMode.HideOther与  E_ShowUIMode.HideAll
+                lastOpen = isOpen;
+                SetIsPop(false, true);
             }
+            SetPopSubItem(value);
         }
 
-        public virtual void InitPanel(string path, UIType uIType, UIRootType uIRootType)
+        protected virtual void SetPopSubItem(bool value)
         {
-            assetPath = path;
-            curUIType = uIType;
-            rootType = uIRootType;
-            //GameObject gameObject = ResManager.Instance.LoadUI();
-            //OnLoadedPrefab(gameObject);
+            if (isChecking_Recursive)
+                return;
+
+            isChecking_Recursive = true;
+            if (subItemList.Count > 0)
+            {
+                foreach (var item in subItemList)
+                {
+                    if (isDeletening)
+                        item.SetGoToDelete();
+                    else
+                        item.SetIsPopRecursive(value);
+                }
+            }
+            isChecking_Recursive = false;
+        }
+
+
+        protected virtual void OnLoadedPrefab(UnityEngine.Object obj)
+        {
+            if (null == obj)
+            {
+                Debug.LogError("面板加载失败path::" + assetPath);
+                return;
+            }
+            GameObject gameObject = GameObject.Instantiate(obj) as GameObject;
+            panelGO = gameObject;
+            thisTrans = gameObject.GetComponent<RectTransform>();
+        }
+
+        protected virtual void InitUI(string path,string _ui_name = null)
+        {
+            ui_name = _ui_name;
+            assetPath = UrlManager.GetUIPath(path);
+        }
+
+        public virtual void LoadUI()
+        {
+            AddressableManager.Instance.LoadGameObject(assetPath, OnLoadedPrefab);
         }
 
         /// <summary>
-        /// 加载完
+        /// 添加界面加载完回调
         /// </summary>
-        /// <param name="gameObject"></param>
-        private void OnLoadedPrefab(GameObject gameObject)
+        /// <param name="action"></param>
+        public virtual void AddLoadedComplete(Action action)
         {
-            if (null == gameObject)
-            {
-                Debug.LogError("面板加载失败" + assetPath);
-                return;
-            }
-            panelGO = gameObject;
-            thisTrans = gameObject.GetComponent<RectTransform>();
-            thisTrans.SetParent(UIManager.Instance.GetUIRootParent(rootType));
-            panelGO.layer = LayerMask.NameToLayer("UI");
-            Initlialize();
-            isInitialize = true;
-            if (isOpen == false)
-            {
-                SetUIActive(false);
-                closeTime = Time.realtimeSinceStartup;
-            }
+            if (isLoadComplete)
+                action();
             else
-            {
-                isOpen = false;
-                SetIsPop(true, true);
-            }
+                onLoadedComlete += action;
         }
 
-        public bool GetIsPop()
+        public virtual void Dispose(){}
+
+        public virtual void DeleteMe()
         {
-            return isPop;
+            onLoadedComlete = null;
+            thisTrans = null;
+            DebugUtil.Log("DeleteMe UI:" + ui_name);
+            DisposeAllImage();
+            if (panelGO)
+                GameObject.DestroyImmediate(panelGO);
+            panelGO = null;
         }
 
-        public void SetIsPop(bool value, bool fromInitPrefab = false)
-        {
-            if (isInitialize == false)
-            {
-                isOpen = value;
-                return;
-            }
-
-            if (isPop != value)
-            {
-                isOpen = value;
-                if (value)
-                    PopUp();
-                else
-                    PopDown();
-                SetPopSubItem(value);
-            }
-            else if (value)
-            {
-                SetUIActive(true);
-            }
-        }
-
-        private void PopUp()
-        {
-            if (panelGO == null)
-            {
-                Debug.LogError("UIBase PopUp panelGo == null" + curUIType.ToString());
-                return;
-            }
-
-            if (isFullScren && showUIMode == ShowUIMode.HideOther)
-            {
-                UIManager.Instance.HideOtherView(UIRootType.Pop, this);
-                openOhterCount = openOhterCount + 1;
-            }
-
-            if (isCLoseOtherView)
-                UIManager.Instance.CloseOtherView(UIRootType.Pop, this);
-            SetUIActive(true);
-            closeTime = 0;
-            OnShowSelf();
-            EventUtil.SendMessage(EventType.UIViewPopChange, curUIType,true);
-        }
-
-        private void PopDown()
+        /// <summary>
+        /// 释放所有图片资源
+        /// </summary>
+        protected void DisposeAllImage()
         {
             
         }
 
-        //窗体的显示
-        public void SetUIActive(bool value)
+        /// <summary>
+        /// 释放
+        /// </summary>
+        /// <param name="url"></param>
+        protected void DisposeImage(string url)
         {
-            if (isInitialize == false || isActive == false)
-                return;
-            isActive = value;
-            if (value)
-            {
-                if (isFullScren && isHideCamera)
-                {
-                    CameraManager.Instance.HideCamera();
-                }
-            }
-            else
-            {
-                if (isFullScren && isHideCamera)
-                    CameraManager.Instance.ShowCamera();
-            }
-            if(panelGO)
-                panelGO.SetActive(value);
-        }
-
-        private void SetPopSubItem(bool value)
-        {
-
-        }
-
-        private void OnSetIsPop(bool value)
-        {
-
-        }
-
-        public void LoadPanel()
-        {
-            GameObject gameObject = ResManager.Instance.LoadUI(assetPath);
-            OnLoadedPrefab(gameObject);
-        }
-
-        //初始化界面元素
-        protected virtual void Initlialize()
-        {
-        }
-        ////初始化数据
-        //protected virtual void InitDataOnAwake()
-        //{
-        //}
-
-        protected virtual void Start()
-        {
-            OnShowSelf();
-        }
-
-        //初始化相关逻辑
-        protected virtual void OnShowSelf()
-        {
-
-        }
-
-        protected virtual void OnHideSelf()
-        {
-
-        }
-
-        protected void beforeDelete()
-        {
-
+            
         }
     }
-
-    //窗体ID
-    public enum UIType
-    {
-        NullUI,
-        LoginUI,//登录界面
-        MainUI,//主界面
-    }
-
-    //窗体的显示方式
-    public enum ShowUIMode
-    {
-        //  窗体显示出来的时候，不会去隐藏任何窗体
-        DoNothing,
-        //  窗体显示出来的时候,会隐藏掉所有的普通窗体，但是不会隐藏保持在最前方的窗体
-        HideOther,
-        //  窗体显示出来的时候,会隐藏所有的窗体，不管是普通的还是保持在最前方的
-        HideAll
-    }
-
-
-    public enum UIClass
-    {
-        
-    }
-
-
 }

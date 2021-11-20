@@ -51,7 +51,7 @@ MonoBehaviour:
       - m_Id: 44bee139dd983ea4b9c2db061f33228d
         m_Value: ServerData/[BuildTarget]
       - m_Id: 4f9092b1ff8322247b96d48ee084d359
-        m_Value: https://assetstreaming-content.unity.cn/client_api/v1/buckets/d9444eef-3a19-495f-82d7-42f2d1c11537/release_by_badge/latest/entry_by_path/content/?path=
+        m_Value: https://assetstreaming.unity.cn/client_api/v1/buckets/d9444eef-3a19-495f-82d7-42f2d1c11537/release_by_badge/latest/entry_by_path/content/?path=
     m_ProfileEntryNames:
     - m_Id: ce0cdf031b14fb241bbdfdd4a495573c
       m_Name: BuildTarget
