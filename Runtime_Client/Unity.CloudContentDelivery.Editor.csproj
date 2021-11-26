@@ -512,6 +512,9 @@
     <Reference Include="ILRuntime.Mono.Cecil">
       <HintPath>Assets\Dependencies\ILRuntime.Mono.Cecil.dll</HintPath>
     </Reference>
+    <Reference Include="TexturePackerImporter">
+      <HintPath>Assets\codeandweb.com\Editor\TexturePackerImporter.dll</HintPath>
+    </Reference>
     <Reference Include="ILRuntime.Mono.Cecil.Mdb">
       <HintPath>Assets\Dependencies\ILRuntime.Mono.Cecil.Mdb.dll</HintPath>
     </Reference>

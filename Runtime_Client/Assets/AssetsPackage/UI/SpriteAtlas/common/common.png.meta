@@ -1,0 +1,492 @@
+fileFormatVersion: 2
+guid: c545cc1223d548e41812f67dcc4d9dba
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8753741297373523541
+    second: Close Button
+  - first:
+      213: -9080674403619125212
+    second: Division line
+  - first:
+      213: 6677821310249764663
+    second: Exclamation_Gray
+  - first:
+      213: -5649123915119214944
+    second: Exclamation_Red
+  - first:
+      213: 606751016647370983
+    second: Exclamation_Yellow
+  - first:
+      213: -2297519575195374364
+    second: IRONY TITLE  empty
+  - first:
+      213: -6583239754430770736
+    second: IRONY TITLE  Large
+  - first:
+      213: -8373055029373153222
+    second: notice
+  - first:
+      213: 2902393851298766510
+    second: TextBTN_Big
+  - first:
+      213: 2435406045328977340
+    second: TextBTN_Big_Pressed
+  - first:
+      213: 7167113168483007433
+    second: TextBTN_Cancel
+  - first:
+      213: 8911796812928098864
+    second: TextBTN_Cancel_Pressed
+  - first:
+      213: -349121687517087782
+    second: TextBTN_Medium
+  - first:
+      213: -330635879031300509
+    second: TextBTN_Medium_Pressed
+  - first:
+      213: 796832671966858429
+    second: TextBTN_New-Start
+  - first:
+      213: -4956202492993804982
+    second: TextBTN_New-Start_Pressed
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Close Button
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 403
+        width: 94
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba1526a5ba6748680800000000000000
+      internalID: -8753741297373523541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Division line
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 496
+        width: 695
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 428cc4bcdb6faf180800000000000000
+      internalID: -9080674403619125212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Exclamation_Gray
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 396
+        width: 97
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73788fed9136cac50800000000000000
+      internalID: 6677821310249764663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Exclamation_Red
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 296
+        width: 97
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aeb723cab74a91b0800000000000000
+      internalID: -5649123915119214944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Exclamation_Yellow
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 285
+        width: 97
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e8af5eb5dc9b6800800000000000000
+      internalID: 606751016647370983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IRONY TITLE  empty
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 290
+        width: 394
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ec29ff7e129d10e0800000000000000
+      internalID: -2297519575195374364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IRONY TITLE  Large
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 385
+        width: 498
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d19ce5a252a3a4a0800000000000000
+      internalID: -6583239754430770736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: notice
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 274
+        width: 394
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a305a6920deeccb80800000000000000
+      internalID: -8373055029373153222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextBTN_Big
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 44
+        width: 338
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaed0f884df574820800000000000000
+      internalID: 2902393851298766510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextBTN_Big_Pressed
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 196
+        width: 338
+        height: 92
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6086956}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbd2ca715ec4cc120800000000000000
+      internalID: 2435406045328977340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextBTN_Cancel
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 158
+        width: 233
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cb34782473b67360800000000000000
+      internalID: 7167113168483007433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextBTN_Cancel_Pressed
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 67
+        width: 233
+        height: 93
+      alignment: 9
+      pivot: {x: 0.5, y: 0.61290324}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 032a9011cff0dab70800000000000000
+      internalID: 8911796812928098864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextBTN_Medium
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 401
+        width: 281
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad7b828ccaba72bf0800000000000000
+      internalID: -349121687517087782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextBTN_Medium_Pressed
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 102
+        width: 281
+        height: 92
+      alignment: 9
+      pivot: {x: 0.5, y: 0.59782606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36e17587b68596bf0800000000000000
+      internalID: -330635879031300509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextBTN_New-Start
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 162
+        width: 281
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbc8206e71bee0b00800000000000000
+      internalID: 796832671966858429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextBTN_New-Start_Pressed
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 8
+        width: 281
+        height: 92
+      alignment: 9
+      pivot: {x: 0.5, y: 0.59782606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a45e23a7718083bb0800000000000000
+      internalID: -4956202492993804982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

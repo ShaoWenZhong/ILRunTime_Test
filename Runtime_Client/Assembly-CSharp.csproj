@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scrips\Managers\PathManager.cs" />
     <Compile Include="Assets\ILRuntime\Reflection\ILRuntimeParameterInfo.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Debugger\DebugService.cs" />
+    <Compile Include="Assets\Scrips\Component\SpriteAssest.cs" />
     <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\08_MonoBehaviour\MonoBehaviourAdapter.cs" />
     <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\12_Performance\Performance.cs" />
     <Compile Include="Assets\Scrips\Managers\QualityManager.cs" />
@@ -197,6 +198,7 @@
     <Compile Include="Assets\ILRuntime\Runtime\Enviorment\DelegateManager.cs" />
     <Compile Include="Assets\3rd\ILRuntime\Generated\System_Collections_Generic_Dictionary_2_String_Int32_Binding.cs" />
     <Compile Include="Assets\ILRuntime\Reflection\ILRuntimePropertyInfo.cs" />
+    <Compile Include="Assets\External\CustomMenu.cs" />
     <Compile Include="Assets\3rd\ILRuntime\1.6.7\Demo\Scripts\Examples\11_ValueTypeBinding\ValueTypeBindingDemo.cs" />
     <Compile Include="Assets\3rd\ILRuntime\Generated\System_Diagnostics_Stopwatch_Binding.cs" />
     <Compile Include="Assets\3rd\ILRuntime\Generated\UnityEngine_Debug_Binding.cs" />
@@ -212,6 +214,7 @@
     <Compile Include="Assets\3rd\ILRuntime\Generated\System_NotSupportedException_Binding.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Intepreter\OpCodes\OpCode.cs" />
     <Compile Include="Assets\ILRuntime\CLR\TypeSystem\ILGenericParameterType.cs" />
+    <Compile Include="Assets\Scrips\Component\AtlasSprite.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Debugger\BreakpointInfo.cs" />
     <Compile Include="Assets\3rd\ILRuntime\Generated\TestDelegateFunction_Binding.cs" />
     <Compile Include="Assets\ILRuntime\Runtime\Debugger\Protocol\CSBindBreakpoint.cs" />
@@ -224,6 +227,7 @@
      <None Include="Assets\StreamingAssets\HotFix\UnityEngine.UI.dll" />
      <None Include="Assets\StreamingAssets\HotFix\System.Diagnostics.Tracing.dll" />
      <None Include="Assets\StreamingAssets\HotFix\System.Security.SecureString.dll" />
+     <None Include="Assets\codeandweb.com\Readme.txt" />
      <None Include="Assets\Dependencies\ILRuntime.Mono.Cecil.Mdb.dll" />
      <None Include="Assets\StreamingAssets\HotFix\System.Xml.XPath.XDocument.dll" />
      <None Include="Assets\StreamingAssets\HotFix\System.Data.Common.dll" />

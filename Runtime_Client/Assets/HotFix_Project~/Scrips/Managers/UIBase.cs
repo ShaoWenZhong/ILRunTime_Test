@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace HotFix_Project.Scrips.Managers
@@ -123,7 +124,7 @@ namespace HotFix_Project.Scrips.Managers
         protected virtual void InitUI(string path,string _ui_name = null)
         {
             ui_name = _ui_name;
-            assetPath = UrlManager.GetUIPath(path);
+            assetPath = UrlManager.GetUIPrefabPath(path);
         }
 
         public virtual void LoadUI()
@@ -156,6 +157,11 @@ namespace HotFix_Project.Scrips.Managers
             panelGO = null;
         }
 
+        protected void DisposeImage()
+        {
+            
+        }
+
         /// <summary>
         /// 释放所有图片资源
         /// </summary>
@@ -168,9 +174,19 @@ namespace HotFix_Project.Scrips.Managers
         /// 释放
         /// </summary>
         /// <param name="url"></param>
-        protected void DisposeImage(string url)
+        protected void LoadImage(string url,RawImage rawImage,bool setNativeSize = false)
         {
-            
+            string path = UrlManager.GetUITexturePath(url);
+            AddressableManager.Instance.LoadAsset<Texture>(path, new Action<Texture>((tex)=> {
+                if (rawImage != null)
+                {
+                    rawImage.texture = tex;
+                }
+                else
+                {
+                    AddressableManager.Instance.Release<Texture>(tex);
+                }
+            }));
         }
     }
 }

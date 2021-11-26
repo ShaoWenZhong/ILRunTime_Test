@@ -9,6 +9,9 @@ using System;
 
 public class AddressableManager:Singleton_Mono<AddressableManager>
 {
+
+    private List<UnityEngine.Object> objects = new List<UnityEngine.Object>(); 
+
     public byte[] LoadFild(string path)
     {
         DebugUtil.Log("LoadFile:" + path);
@@ -55,19 +58,35 @@ public class AddressableManager:Singleton_Mono<AddressableManager>
         
     }
 
-
     public async Task<UnityEngine.Object> LoadGameObject(string path,Action<UnityEngine.Object> action)
     {
         DebugUtil.Log("LoadGameObject_Addressable:" + path);
         UnityEngine.Object obj = await Addressables.LoadAssetAsync<UnityEngine.Object>(path).Task;
-        //GameObject go = GameObject.Instantiate(obj) as GameObject;
         if (action != null)
             action(obj);
         return obj; 
     }
 
-    private void action(AsyncOperationHandle<GameObject> obj)
+    public async Task<Texture> LoadTexture(string path, Action<Texture> action)
     {
-        throw new NotImplementedException();
+        DebugUtil.Log("LoadTexture_Addressable:" + path);
+        Texture obj = await Addressables.LoadAssetAsync<Texture>(path).Task;
+        if (action != null)
+            action(obj);
+        return obj;
+    }
+
+    public async Task<TObject> LoadAsset<TObject>(string path,Action<TObject> action)
+    {
+        DebugUtil.Log("LoadTexture_Addressable:" + path);
+        TObject obj = await Addressables.LoadAssetAsync<TObject>(path).Task;
+        if (action != null)
+            action(obj);
+        return obj;
+    }
+
+    public void Release<TObject>(TObject obj)
+    {
+        Addressables.Release(obj);
     }
 }
