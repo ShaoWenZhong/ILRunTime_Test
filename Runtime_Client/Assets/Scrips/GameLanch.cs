@@ -42,8 +42,11 @@ public class GameLanch : Singleton_Mono<GameLanch>
         //热更代码已经打成bundler包进行加载
 
 #if UNITY_ANDROID
-        Task<byte[]> task = AddressableManager.Instance.LoadFile_Addressable("Hot_FixDLL");
+        //Task<byte[]> task = AddressableManager.Instance.LoadFile_Addressable("Hot_FixDLL");
+
         //WWW www = new WWW(Application.streamingAssetsPath + "/HotFix_Project.dll");
+
+        WWW www = new WWW("file:///" + Application.streamingAssetsPath + "/HotFix/HotFix_Project.dll");
 #else
         //WWW www = new WWW("file:///" + Application.streamingAssetsPath + "/HotFix/HotFix_Project.dll");
         WWW www = new WWW("file:///" + Application.streamingAssetsPath + "/HotFix/HotFix_Project.dll");
@@ -63,7 +66,10 @@ public class GameLanch : Singleton_Mono<GameLanch>
         //PDB文件是调试数据库，如需要在日志中显示报错的行号，则必须提供PDB文件，不过由于会额外耗用内存，正式发布时请将PDB去掉，下面LoadAssembly的时候pdb传null即可
 #if UNITY_ANDROID
         //www = new WWW(Application.streamingAssetsPath + "/HotFix_Project.pdb");
-        Task<byte[]> task_pdb = AddressableManager.Instance.LoadFile_Addressable("Hot_FixPDB");
+        //Task<byte[]> task_pdb = AddressableManager.Instance.LoadFile_Addressable("Hot_FixPDB");
+
+        www = new WWW("file:///" + Application.streamingAssetsPath + "/HotFix/HotFix_Project.pdb");
+
 #else
         www = new WWW("file:///" + Application.streamingAssetsPath + "/HotFix/HotFix_Project.pdb");
         //Task<byte[]> task_pdb = AddressableManager.Instance.LoadFile_Addressable("Hot_FixPDB");

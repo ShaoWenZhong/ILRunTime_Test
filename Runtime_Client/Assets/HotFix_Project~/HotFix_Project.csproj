@@ -86,6 +86,7 @@
     <Compile Include="Scrips\Game\Login\LoginView.cs" />
     <Compile Include="Scrips\Game\SelectRole\SelectRoleView.cs" />
     <Compile Include="Scrips\Main.cs" />
+    <Compile Include="Scrips\Managers\AtlasManager.cs" />
     <Compile Include="Scrips\Managers\EventSender.cs" />
     <Compile Include="Scrips\Managers\LayerManager.cs" />
     <Compile Include="Scrips\Managers\UIBase.cs" />

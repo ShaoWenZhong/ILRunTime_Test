@@ -19,5 +19,11 @@ namespace HotFix_Project.Scrips.Managers
             string full_path = "Assets/AssetsPackage/UI/Texture/" + path;
             return full_path;
         }
+
+        public static string GESpriteAtlasPath(string path)
+        {
+            string full_path = "Assets/AssetsPackage/UI/SpriteAtlas/" + path + ".prefab";
+            return full_path;
+        }
     }
 }
