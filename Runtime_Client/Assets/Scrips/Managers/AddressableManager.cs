@@ -78,7 +78,7 @@ public class AddressableManager:Singleton_Mono<AddressableManager>
 
     public async Task<TObject> LoadAsset<TObject>(string path,Action<TObject> action)
     {
-        DebugUtil.Log("LoadTexture_Addressable:" + path);
+        DebugUtil.Log("LoadAsset:" + path);
         TObject obj = await Addressables.LoadAssetAsync<TObject>(path).Task;
         if (action != null)
             action(obj);
@@ -88,5 +88,14 @@ public class AddressableManager:Singleton_Mono<AddressableManager>
     public void Release<TObject>(TObject obj)
     {
         Addressables.Release(obj);
+    }
+
+    public void LoadAssetAsync<TObject>(string bundleName,Action<TObject> action)
+    {
+        //DebugUtil.Log("LoadAssetAsync:" + bundleName);
+        Addressables.LoadAssetAsync<TObject>(bundleName).Completed += new Action<AsyncOperationHandle<TObject>>((handle) =>
+        {
+            action(handle.Result);
+        });
     }
 }

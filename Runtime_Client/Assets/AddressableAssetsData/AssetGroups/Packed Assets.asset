@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Packed Assets
+  m_EditorClassIdentifier: 
+  m_GroupName: Packed Assets
+  m_Data:
+    m_SerializedData: []
+  m_GUID: fc30bf44bffd4f34f8d150319019d38b
+  m_SerializeEntries:
+  - m_GUID: 736c82fb438fab64d8788327cf4729eb
+    m_Address: Assets/AssetsPackage/UI/Texture/commonBg
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    m_MainAsset: {fileID: 102900000, guid: 736c82fb438fab64d8788327cf4729eb, type: 3}
+    m_TargetAsset: {fileID: 102900000, guid: 736c82fb438fab64d8788327cf4729eb, type: 3}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 5bb66aa21eb57174086c90cd1c895f5a, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 16c81e886b229484caaa1b40db4d302c, type: 2}
+    - {fileID: 11400000, guid: 3d65554e7b9197445b4422090520d9d0, type: 2}

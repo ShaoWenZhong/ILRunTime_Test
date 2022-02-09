@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &628012944253067727
+--- !u!1 &7535625361729273911
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5046545203108458473}
-  - component: {fileID: 1864318361432111331}
+  - component: {fileID: 8193680698060691822}
+  - component: {fileID: -7603618468823834817}
   m_Layer: 0
   m_Name: common
   m_TagString: Untagged
@@ -17,13 +17,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5046545203108458473
+--- !u!4 &8193680698060691822
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628012944253067727}
+  m_GameObject: {fileID: 7535625361729273911}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,13 +31,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1864318361432111331
+--- !u!114 &-7603618468823834817
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628012944253067727}
+  m_GameObject: {fileID: 7535625361729273911}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38704a57606577c4d9a2e8164fd56aa1, type: 3}
@@ -45,51 +45,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   texture: {fileID: 2800000, guid: c545cc1223d548e41812f67dcc4d9dba, type: 3}
   spriteInfos:
-  - ID: 1
+  - ID: 0
     name: Close Button
-    sprite: {fileID: 0}
-  - ID: 2
-    name: Division line
-    sprite: {fileID: 0}
-  - ID: 3
-    name: Exclamation_Gray
-    sprite: {fileID: 0}
-  - ID: 4
-    name: Exclamation_Red
-    sprite: {fileID: 0}
-  - ID: 5
-    name: Exclamation_Yellow
-    sprite: {fileID: 0}
-  - ID: 6
-    name: IRONY TITLE  empty
-    sprite: {fileID: 0}
-  - ID: 7
-    name: IRONY TITLE  Large
-    sprite: {fileID: 0}
-  - ID: 8
-    name: notice
-    sprite: {fileID: 0}
-  - ID: 9
-    name: TextBTN_Big
-    sprite: {fileID: 0}
-  - ID: 10
-    name: TextBTN_Big_Pressed
-    sprite: {fileID: 0}
-  - ID: 11
-    name: TextBTN_Cancel
-    sprite: {fileID: 0}
-  - ID: 12
-    name: TextBTN_Cancel_Pressed
-    sprite: {fileID: 0}
-  - ID: 13
-    name: TextBTN_Medium
-    sprite: {fileID: 0}
-  - ID: 14
+    sprite: {fileID: -8753741297373523541, guid: c545cc1223d548e41812f67dcc4d9dba, type: 3}
+  - ID: 1
     name: TextBTN_Medium_Pressed
-    sprite: {fileID: 0}
-  - ID: 15
-    name: TextBTN_New-Start
-    sprite: {fileID: 0}
-  - ID: 16
+    sprite: {fileID: -330635879031300509, guid: c545cc1223d548e41812f67dcc4d9dba, type: 3}
+  - ID: 3
+    name: TextBTN_Medium
+    sprite: {fileID: -349121687517087782, guid: c545cc1223d548e41812f67dcc4d9dba, type: 3}
+  - ID: 4
+    name: Division line
+    sprite: {fileID: -9080674403619125212, guid: c545cc1223d548e41812f67dcc4d9dba, type: 3}
+  - ID: 5
+    name: notice
+    sprite: {fileID: -8373055029373153222, guid: c545cc1223d548e41812f67dcc4d9dba, type: 3}
+  - ID: 6
+    name: IRONY TITLE  Large
+    sprite: {fileID: -6583239754430770736, guid: c545cc1223d548e41812f67dcc4d9dba, type: 3}
+  - ID: 7
+    name: Exclamation_Red
+    sprite: {fileID: -5649123915119214944, guid: c545cc1223d548e41812f67dcc4d9dba, type: 3}
+  - ID: 8
     name: TextBTN_New-Start_Pressed
-    sprite: {fileID: 0}
+    sprite: {fileID: -4956202492993804982, guid: c545cc1223d548e41812f67dcc4d9dba, type: 3}
+  - ID: 9
+    name: IRONY TITLE  empty
+    sprite: {fileID: -2297519575195374364, guid: c545cc1223d548e41812f67dcc4d9dba, type: 3}
+  - ID: 10
+    name: Exclamation_Yellow
+    sprite: {fileID: 606751016647370983, guid: c545cc1223d548e41812f67dcc4d9dba, type: 3}
+  - ID: 11
+    name: TextBTN_New-Start
+    sprite: {fileID: 796832671966858429, guid: c545cc1223d548e41812f67dcc4d9dba, type: 3}
+  - ID: 12
+    name: TextBTN_Big_Pressed
+    sprite: {fileID: 2435406045328977340, guid: c545cc1223d548e41812f67dcc4d9dba, type: 3}
+  - ID: 13
+    name: TextBTN_Big
+    sprite: {fileID: 2902393851298766510, guid: c545cc1223d548e41812f67dcc4d9dba, type: 3}
+  - ID: 14
+    name: Exclamation_Gray
+    sprite: {fileID: 6677821310249764663, guid: c545cc1223d548e41812f67dcc4d9dba, type: 3}
+  - ID: 15
+    name: TextBTN_Cancel
+    sprite: {fileID: 7167113168483007433, guid: c545cc1223d548e41812f67dcc4d9dba, type: 3}
+  - ID: 16
+    name: TextBTN_Cancel_Pressed
+    sprite: {fileID: 8911796812928098864, guid: c545cc1223d548e41812f67dcc4d9dba, type: 3}

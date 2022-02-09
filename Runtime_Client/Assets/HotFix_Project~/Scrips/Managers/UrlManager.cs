@@ -16,13 +16,14 @@ namespace HotFix_Project.Scrips.Managers
 
         public static string GetUITexturePath(string path)
         {
-            string full_path = "Assets/AssetsPackage/UI/Texture/" + path;
+            string full_path = "Assets/AssetsPackage/UI/Texture/" + path + ".png";
             return full_path;
         }
 
         public static string GESpriteAtlasPath(string path)
         {
             string full_path = "Assets/AssetsPackage/UI/SpriteAtlas/" + path + ".prefab";
+            //string full_path = "Assets/AssetsPackage/UI/SpriteAtlas/" + path;
             return full_path;
         }
     }

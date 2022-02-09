@@ -4,10 +4,22 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
 using UnityEngine.EventSystems;
+using UnityEngine.AddressableAssets;
 
 public static class CustomMenu
 {
     private static Vector2 defaultImageSize = new Vector2();
+
+    [MenuItem("Tool/¼ì²â×ÊÔ´")]
+    public static void CheckBundle(MenuCommand menuCommand)
+    {
+        var paths = AssetDatabase.GetAllAssetPaths();
+        for (int i = 0; i < paths.Length; i++)
+        {
+            Debug.Log(paths[i]);
+        }
+    }
+
 
     [MenuItem("GameObject/UI/AtlasSprite")]
     public static void CreatSpriteAsset(MenuCommand menuCommand)

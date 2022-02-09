@@ -36,7 +36,7 @@ namespace HotFix_Project.Scrips.Managers
         protected List<UIBase> subItemList;
         private bool isChecking_Recursive = false;
 
-        protected List<RawImage> rawImages;
+        protected List<Texture> texture_list = new List<Texture>();
 
         protected virtual void Initlialize() {
             isInitialize = true;
@@ -151,7 +151,7 @@ namespace HotFix_Project.Scrips.Managers
             onLoadedComlete = null;
             thisTrans = null;
             DebugUtil.Log("DeleteMe UI:" + ui_name);
-            DisposeAllImage();
+            DisposeTexture();
             if (panelGO)
                 GameObject.DestroyImmediate(panelGO);
             panelGO = null;
@@ -163,30 +163,39 @@ namespace HotFix_Project.Scrips.Managers
         }
 
         /// <summary>
-        /// 释放所有图片资源
-        /// </summary>
-        protected void DisposeAllImage()
-        {
-            
-        }
-
-        /// <summary>
         /// 释放
         /// </summary>
         /// <param name="url"></param>
         protected void LoadImage(string url,RawImage rawImage,bool setNativeSize = false)
         {
             string path = UrlManager.GetUITexturePath(url);
-            AddressableManager.Instance.LoadAsset<Texture>(path, new Action<Texture>((tex)=> {
-                if (rawImage != null)
+            DebugUtil.Log(path);
+            AddressableManager.Instance.LoadAssetAsync<UnityEngine.Object>(path, new Action<UnityEngine.Object>((tex)=> {
+                var _tex = tex as Texture;
+                if (rawImage != null && _tex != null)
                 {
-                    rawImage.texture = tex;
+                    rawImage.texture = _tex;
+                    texture_list.Add(_tex);
                 }
                 else
                 {
-                    AddressableManager.Instance.Release<Texture>(tex);
+                    AddressableManager.Instance.Release<Texture>(_tex);
                 }
             }));
+        }
+
+
+        private void DisposeTexture()
+        {
+            DebugUtil.Log("dispose_texture:"+ui_name);
+            Texture texture;
+            int len = texture_list.Count;
+            for (int i = 0; i < len; i++)
+            {
+                texture = texture_list[i];
+                AddressableManager.Instance.Release<Texture>(texture);
+                texture_list.RemoveAt(i);
+            }
         }
     }
 }

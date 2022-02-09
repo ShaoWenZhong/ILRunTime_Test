@@ -83,6 +83,29 @@
     <Compile Include="Scrips\3rd\TestDelegate.cs" />
     <Compile Include="Scrips\3rd\InstanceClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scrips\Config\code\ConfigsManager.cs" />
+    <Compile Include="Scrips\Config\code\DataStream.cs" />
+    <Compile Include="Scrips\Config\code\Item\actorAttributeItem.cs" />
+    <Compile Include="Scrips\Config\code\Item\actorItem.cs" />
+    <Compile Include="Scrips\Config\code\Item\AnythingItem.cs" />
+    <Compile Include="Scrips\Config\code\Item\bulletItem.cs" />
+    <Compile Include="Scrips\Config\code\Item\itemItem.cs" />
+    <Compile Include="Scrips\Config\code\Item\LanguageItem.cs" />
+    <Compile Include="Scrips\Config\code\Item\levelItem.cs" />
+    <Compile Include="Scrips\Config\code\Item\RewardItemItem.cs" />
+    <Compile Include="Scrips\Config\code\Item\SoundItem.cs" />
+    <Compile Include="Scrips\Config\code\Item\weaponItem.cs" />
+    <Compile Include="Scrips\Config\code\SelfDefineTableType.cs" />
+    <Compile Include="Scrips\Config\code\Set\actorAttributeSet.cs" />
+    <Compile Include="Scrips\Config\code\Set\actorSet.cs" />
+    <Compile Include="Scrips\Config\code\Set\AnythingSet.cs" />
+    <Compile Include="Scrips\Config\code\Set\bulletSet.cs" />
+    <Compile Include="Scrips\Config\code\Set\itemSet.cs" />
+    <Compile Include="Scrips\Config\code\Set\LanguageSet.cs" />
+    <Compile Include="Scrips\Config\code\Set\levelSet.cs" />
+    <Compile Include="Scrips\Config\code\Set\RewardItemSet.cs" />
+    <Compile Include="Scrips\Config\code\Set\SoundSet.cs" />
+    <Compile Include="Scrips\Config\code\Set\weaponSet.cs" />
     <Compile Include="Scrips\Game\Login\LoginView.cs" />
     <Compile Include="Scrips\Game\SelectRole\SelectRoleView.cs" />
     <Compile Include="Scrips\Main.cs" />
@@ -100,6 +123,9 @@
     <Compile Include="Scrips\Utils\Singleton_HotFIx.cs" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <None Include="Scrips\Config\data\data.bytes" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

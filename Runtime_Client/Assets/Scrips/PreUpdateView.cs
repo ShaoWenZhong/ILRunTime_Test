@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using System.Threading.Tasks;
+using UnityEngine.ResourceManagement.ResourceLocations;
+using System;
 
 public class PreUpdateView : MonoBehaviour
 {
@@ -52,12 +54,36 @@ public class PreUpdateView : MonoBehaviour
         AsyncOperationHandle<long> getDownloadSize = Addressables.GetDownloadSizeAsync(label);
         yield return getDownloadSize;
 
+
+
         DebugUtil.Log("getDownloadSize quality label:" + label + getDownloadSize.Result);
         if (getDownloadSize.Result > 0)
         {
             downloadDependencies = Addressables.DownloadDependenciesAsync(label);
             slider.gameObject.SetActive(true);
             yield return downloadDependencies;
+        }
+
+        //List<string> keyList = Addressables.();
+        AsyncOperationHandle<IList<IResourceLocation>> handle = Addressables.LoadResourceLocationsAsync("default");
+        yield return handle;
+        DateTime startTime = DateTime.Now;
+        if (handle.Status == AsyncOperationStatus.Succeeded)
+        {
+            Debug.Log(string.Format("【通过Labels获取Keys成功】数量：{0} 用时：{1:0.00}S", handle.Result.Count, (DateTime.Now - startTime).Seconds));
+            List<object> keys = new List<object>();
+            foreach (var item in handle.Result)
+            {
+                //keys.Add(item.PrimaryKey);
+                Debug.Log(item.PrimaryKey);
+            }
+            //keysCallback?.Invoke(keys);
+            //statusCallback?.Invoke(AsyncOperationStatus.Succeeded);
+        }
+        else
+        {
+            Debug.LogError(string.Format("【过Labels获取Keys失败】 用时：{0:0.00}S", (DateTime.Now - startTime).Seconds));
+            //statusCallback?.Invoke(AsyncOperationStatus.Failed);
         }
 
     }

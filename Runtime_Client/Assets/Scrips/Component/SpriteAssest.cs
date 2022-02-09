@@ -11,8 +11,10 @@ public class SpriteAssest : MonoBehaviour
 
     public Sprite GetSpriteWithName(string name)
     {
+        DebugUtil.Log("GetSpriteWithName:"+ name);
         for (int i = 0; i < spriteInfos.Count; i++)
         {
+            DebugUtil.Log("==========:" + spriteInfos[i].name);
             if (spriteInfos[i].name.Equals(name))
                 return spriteInfos[i].sprite;
         }

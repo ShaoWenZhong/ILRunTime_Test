@@ -63,6 +63,7 @@ public static class AtlasBuild
                 Sprite sprite = objects[i] as Sprite;
                 temp.ID = i;
                 temp.name = sprite.name;
+                temp.sprite = sprite;
                 spriteInfos.Add(temp);
             }
         }
